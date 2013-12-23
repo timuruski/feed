@@ -2,7 +2,7 @@ module Feed
   module Commands
     class Fetch
       def self.run(base_path = ENV['FEED_PATH'], args = ARGV)
-        env = Environment.new(base_path)
+        env = Environment.build(base_path)
         self.new(env).run(args)
       end
 
@@ -13,7 +13,9 @@ module Feed
       end
 
       def run(args)
-        puts @remote.get_subscriptions
+        subscriptions = @remote.get_subscriptions
+        puts subscriptions.map { |s| s['title'] }
+
         # entries = @remote_store.get_latest_entries
         # entries.each do |entry|
         #   puts entry
