@@ -1,0 +1,8 @@
+#! /usr/bin/env ruby
+
+LIB_PATH = File.expand_path('../../lib', __FILE__)
+$:.unshift LIB_PATH
+
+require 'feed'
+
+Feed::Commands::Fetch.run

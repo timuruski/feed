@@ -1,0 +1,7 @@
+Feed v0.1.0
+===========
+
+A command line news reader. First version only supports
+[Feedbin](http://feedbin.me) but other adaptors should be possible.
+
+    $ bin/feed-fetch

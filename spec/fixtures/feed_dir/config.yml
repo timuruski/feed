@@ -1,0 +1,5 @@
+---
+remote:
+  adaptor: feedbin
+  username: username
+  password: password
